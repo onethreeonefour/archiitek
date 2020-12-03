@@ -1,0 +1,65 @@
+$raleway: "Raleway", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Cormorant Garamond", serif;
+}
+.hero-container {
+    .hero-grid {
+        .hero-image-container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+        .hero-heading {
+            display: grid;
+            height: 100vh;
+            place-content: center;
+            color: black;
+            text-align: center;
+
+            h1 {
+                font-weight: 900;
+                font-size: 6rem;
+                letter-spacing: 3px;
+                font-weight: 400;
+            }
+            h2 {
+                font-weight: 100;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+.hero-float {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    writing-mode: vertical-lr;
+    font-size: 1.5rem;
+}
+.call-to-action {
+    margin-top: 3rem;
+    a {
+        text-shadow: none;
+        color: white;
+        text-decoration: none;
+        padding: 1.5rem;
+        background-color: black;
+        margin-left: 0.5rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-family: $raleway;
+    }
+}
+.about-container {
+    background-color: white;
+    padding: 4rem 0 4rem 0;
+    height: 100vh;
+    display: block;
+}
