@@ -6,33 +6,42 @@ $raleway: "Raleway", sans-serif;
     font-family: "Cormorant Garamond", serif;
 }
 .hero-container {
-    .hero-grid {
-        .hero-image-container {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            img {
-                object-fit: cover;
-                width: 100%;
-            }
-        }
-        .hero-heading {
-            display: grid;
-            height: 100vh;
-            place-content: center;
-            color: black;
-            text-align: center;
+    .hero-image-container {
+        padding: 7.5vh 0 7.5vh 0;
+        width: 85%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
 
-            h1 {
-                font-weight: 900;
-                font-size: 6rem;
-                letter-spacing: 3px;
-                font-weight: 400;
-            }
-            h2 {
-                font-weight: 100;
-                font-size: 1.8rem;
-            }
+        img {
+            height: 85vh;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .hero-heading {
+        display: grid;
+        align-items: center;
+        place-content: center;
+        text-align: right;
+
+        h1 {
+            font-weight: 900;
+            font-size: 3.3rem;
+            letter-spacing: 3px;
+            font-weight: 400;
+        }
+        h2 {
+            padding: 2rem 0 2rem 0;
+            font-weight: 100;
+            font-size: 1.4rem;
+        }
+        .arrow {
+            position: absolute;
+            bottom: 10%;
+            right: 7.5%;
+            animation: float 3s ease-in-out infinite;
         }
     }
 }
@@ -43,23 +52,48 @@ $raleway: "Raleway", sans-serif;
     writing-mode: vertical-lr;
     font-size: 1.5rem;
 }
-.call-to-action {
-    margin-top: 3rem;
-    a {
-        text-shadow: none;
-        color: white;
-        text-decoration: none;
-        padding: 1.5rem;
-        background-color: black;
-        margin-left: 0.5rem;
-        border-radius: 5px;
+
+.about-container {
+    width: 85%;
+    margin: auto;
+
+    h1 {
         text-transform: uppercase;
-        font-family: $raleway;
+        border-bottom: 1px solid black;
+        padding-bottom: 1rem;
+        width: 50%;
+    }
+    .about-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 4rem 0 4rem 0;
+        div {
+            display: grid;
+            place-content: center;
+            h2 {
+                padding-bottom: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        img {
+            height: 600px;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 }
-.about-container {
-    background-color: white;
-    padding: 4rem 0 4rem 0;
-    height: 100vh;
-    display: block;
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-30px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
