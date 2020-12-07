@@ -1,5 +1,6 @@
 import React from 'react'
 import About from '../About/About'
+import Projects from '../Projects/Projects'
 import Hero1 from '../../Images/hero-1.jpg'
 import Hero2 from '../../Images/hero-2.jpg'
 import { ReactComponent as Arrow } from '../../Images/Arrow.svg'
@@ -21,7 +22,7 @@ function Landing() {
                             <h1>ARCHITECTURE</h1>
                             <h1>INTERIOR</h1>
                             <h1>DESIGN</h1>
-                            <h2>Archiitek Industries</h2>
+                            <h2>Modern Elegance</h2>
                             <Arrow className='arrow' />
                         </div>
                     </div>
@@ -30,6 +31,9 @@ function Landing() {
             </div>
             <div >
                 <About />
+            </div>
+            <div>
+                <Projects />
             </div>
         </div >
     )
