@@ -1,6 +1,7 @@
 import React from 'react'
 import About from '../About/About'
 import Projects from '../Projects/Projects'
+import Contact from '../Contact/Contact'
 import Hero1 from '../../Images/hero-1.jpg'
 import Hero2 from '../../Images/hero-2.jpg'
 import { ReactComponent as Arrow } from '../../Images/Arrow.svg'
@@ -29,12 +30,15 @@ function Landing() {
 
                 </div>
             </div>
-            <div >
+            <>
                 <About />
-            </div>
-            <div>
+            </>
+            <>
                 <Projects />
-            </div>
+            </>
+            <>
+                <Contact />
+            </>
         </div >
     )
 }

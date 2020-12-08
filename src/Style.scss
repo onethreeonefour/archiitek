@@ -11,13 +11,28 @@ h4,
 h5 {
     font-family: "Cormorant Garamond", serif;
 }
-p {
+p,
+button {
     font-family: $raleway;
     color: #4b4a4a;
 }
 body {
     background-color: rgb(248, 248, 248);
 }
+
+.heading-left {
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(5, 1, 68, 0.11);
+    padding: 1rem 0 1rem 0;
+}
+
+.heading-right {
+    text-align: right;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(5, 1, 68, 0.11);
+    padding: 1rem 0 1rem 0;
+}
+
 .hero-container {
     .hero-image-container {
         padding: 7.5vh 0 7.5vh 0;
@@ -103,8 +118,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 2rem;
     gap: 1rem;
+
     .service-card {
-        padding: 3rem;
+        padding: 3.25rem;
         display: block;
         text-align: center;
     }
@@ -153,7 +169,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
-    margin: 2rem auto auto auto;
+    margin: 4rem auto auto auto;
     .project-number {
         position: absolute;
         left: 10%;
@@ -170,6 +186,10 @@ body {
     .project-grid-img {
         width: 100%;
         display: block;
+        transition: 0.4s all ease-in-out;
+    }
+    .project-grid-img:hover {
+        filter: brightness(110%);
     }
     .project-tagline {
         display: block;
@@ -186,14 +206,46 @@ body {
         border-color: #444444;
         border-radius: 5px;
         cursor: pointer;
-        font-family: $garamond;
-        font-size: 1.1rem;
+
         transition: all 0.4s ease-in-out;
-        font-weight: 600;
     }
     .project-details:hover {
-        background-color: transparent;
-        color: black;
+        background-color: #c0aa91;
+        border-color: #c0aa91;
+    }
+}
+
+.contact-container {
+    margin-top: 4rem;
+    background-color: #0c1820;
+    color: white;
+    padding: 4rem;
+    .contact-form {
+        width: 80%;
+        margin: auto;
+        button {
+            margin-top: 2rem;
+            background-color: white;
+            color: black;
+            padding: 1rem;
+            border-color: black;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.4s all ease-in-out;
+        }
+        button:hover {
+            background-color: #c0aa91;
+            color: white;
+        }
+        .address {
+            margin-top: 2rem;
+            display: flex;
+
+            gap: 2rem;
+        }
+        p {
+            color: white;
+        }
     }
 }
 @keyframes float {
@@ -207,15 +259,105 @@ body {
         transform: translatey(0px);
     }
 }
-.heading-left {
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(5, 1, 68, 0.11);
-    padding: 1rem 0 1rem 0;
+
+@media screen and (max-width: 1024px) {
+    .hero-container {
+        .hero-heading {
+            h1 {
+                font-size: 2.25rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .about-container {
+        width: 90%;
+    }
 }
 
-.heading-right {
-    text-align: right;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(5, 1, 68, 0.11);
-    padding: 1rem 0 1rem 0;
+@media screen and (max-width: 768px) {
+    .hero-float {
+        color: white;
+        font-size: 1rem;
+        writing-mode: horizontal-tb;
+    }
+    .heading-left {
+        padding: 1rem;
+    }
+
+    .heading-right {
+        padding: 1rem;
+    }
+    .hero-container {
+        .hero-image-container {
+            display: block;
+        }
+        img:nth-child(1) {
+            display: none;
+        }
+        .hero-heading {
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            font-size: 3rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            h1 {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .arrow {
+                display: none;
+            }
+        }
+    }
+    .about-container {
+        width: 100%;
+        .about-card {
+            grid-template-columns: auto;
+            div:nth-child(1) {
+                padding: 2rem;
+            }
+            img {
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .services-grid {
+        width: 90%;
+        margin: 2rem auto auto auto;
+        grid-template-columns: auto;
+    }
+    .project-card {
+        grid-template-columns: auto;
+        width: 100%;
+        .project-number {
+            display: none;
+        }
+        div:nth-child(1) {
+            padding: 2rem;
+        }
+        .project-details {
+            margin: 2rem auto 2rem auto;
+        }
+    }
+    .contact-container {
+        .contact-form {
+            width: 100%;
+            .address {
+                display: block;
+                div {
+                    padding: 1rem 0 1rem 0;
+                }
+            }
+        }
+    }
 }
