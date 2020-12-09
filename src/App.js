@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import Landing from './Components/Landing/Landing'
+import Footer from './Components/Utilities/Footer'
 import { Route, Switch } from 'react-router-dom';
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Route exact path="/" component={Landing} />
         </Switch>
       </div>
+      <Footer />
     </Suspense>
   );
 }
