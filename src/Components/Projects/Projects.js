@@ -15,7 +15,7 @@ function Projects() {
             }, duration: 1.4, autoAlpha: 0, stagger: 0.6
         });
 
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             gsap.from(`.project-anim-${i}`, {
                 scrollTrigger: {
                     trigger: `.project-anim-${i}`,
