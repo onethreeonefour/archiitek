@@ -1,5 +1,14 @@
 # Architecture Website
 
+ReactJS website using GSAP animations and with a modern layout.
+
+# Technologies
+
+ReactJS
+
+Sass
+
+GSAP
 
 
 # Image Sources
