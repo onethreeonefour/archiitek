@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutImg from '../../Images/hero-3.jpg'
+import AboutImg from '../../Images/hero-3.webp'
 import Service1 from '../../Images/Services/1.png'
 import Service2 from '../../Images/Services/2.png'
 import Service3 from '../../Images/Services/3.png'
